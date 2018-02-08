@@ -1,0 +1,12 @@
+
+fpArithmetic.out: MyFloat.o main.o
+	g++ -g -Wall -32 -o fpArithmetic.out MyFloat.o main.o
+
+main.o: main.cpp MyFloat.h
+	g++ -g -Wall -32 -c -o main.o main.cpp
+	
+MyFloat.o: MyFloat.h MyFloat.cpp
+	g++ -g -Wall -32 -c -o MyFloat.o MyFloat.cpp
+	
+clean:
+	rm main.o MyFloat.o fpArithmetic.out

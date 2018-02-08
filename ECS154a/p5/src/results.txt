@@ -1,0 +1,14 @@
+Scores from p5 for Chestakov,Sergei Sadek,Kamal 
+Addresses used: schestakov@ucdavis.edu,kjsadek@ucdavis.edu, 
+
+vm.cpp: 
+Testing vmtest-1000-6.txt: 
+
+Not OK
+Testing vmtest-1000-7.txt: 
+
+Not OK
+Testing vmtest-1000-8.txt: 
+
+Not OK
+Total score: 0 

@@ -1,0 +1,24 @@
+Scores from p5 for Chestakov,Sergei 
+Addresses used: schestakov@ucdavis.edu, 
+dmcache.cpp:
+Testing dmtest-8-64-1000-14.txt: 
+
+Not OK
+Testing dmtest-8-64-1000-15.txt: 
+
+Not OK
+Testing dmtest-8-64-1000-16.txt: 
+
+Not OK
+
+sacache.cpp: 
+Testing satest-1000-14.txt: 
+
+Not OK
+Testing satest-1000-15.txt: 
+
+Not OK
+Testing satest-1000-16.txt: 
+
+Not OK
+Total score: 0 + 0 = 0

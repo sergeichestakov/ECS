@@ -1,0 +1,18 @@
+#include <iostream>
+#include <iomanip>
+#include <string>
+#include <fstream>
+using namespace std;
+
+int main(int argc, char*argv[])
+{
+	string line;
+	string filename;
+	filename = argv[1];
+	if(argc > 0){
+		ifstream inputFile(filename);
+		inputFile.open(filename);
+	}
+	getline(inputFile,line);
+	cout << line.length() << endl;
+}

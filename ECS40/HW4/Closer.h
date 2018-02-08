@@ -1,0 +1,20 @@
+/*
+Sergei Chestakov
+913914694
+*/
+#ifndef CLOSER_H
+#define CLOSER_H
+#include "Facility.h"
+class Closer {
+	public:
+	Closer(double lat, double lng){
+		latitude = lat;
+		longitude = lng;
+	}
+	bool operator() (Facility *f1, Facility *f2){
+		return f1->distance(latitude, longitude) < f2->distance(latitude, longitude);
+	}
+	private:
+	double latitude, longitude;
+};
+#endif
