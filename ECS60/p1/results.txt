@@ -1,0 +1,12 @@
+Scores from p1 for Mason Corey Chestakov Sergei 
+Note that format is: e-mail<comma>last name<comma>first name
+For example: ssdavis@ucdavis.edu,Davis,Sean
+
+Addresses used: cmason@ucdavis.edu schestakov@ucdavis.edu  
+timetest.cpp does not compile!
+
+boarding.cpp:
+#include of system header file other than iostream, fstream, StackAr, QueueAr, or
+'[' on a line without 'ifstream', or 'string' found in boarding.* so zero.
+Timetest score: 0  Boarding score: 0
+Total: 0 out of 25.

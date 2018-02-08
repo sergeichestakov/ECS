@@ -1,0 +1,307 @@
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  ms/call  ms/call  name    
+ 31.50      0.17     0.17   736714     0.00     0.00  Tripper::dijkstraStep(VBinaryHeap&, int, int)
+ 14.83      0.25     0.08      500     0.16     0.16  Tripper::setHeur(int, int)
+ 12.97      0.32     0.07   965871     0.00     0.00  VBinaryHeap::deleteMin(Vertex&)
+ 12.97      0.39     0.07      500     0.14     0.74  Tripper::findCity(int, int, int&, int&)
+  9.27      0.44     0.05       16     3.13     4.31  Tripper::fillLandmark(int, int)
+  7.41      0.48     0.04      500     0.08     0.08  Tripper::initializeTable()
+  3.71      0.50     0.02 21285871     0.00     0.00  Vertex::Vertex()
+  1.85      0.51     0.01  1354872     0.00     0.00  VBinaryHeap::insert(Vertex const&)
+  1.85      0.52     0.01     1016     0.01     0.03  VBinaryHeap::VBinaryHeap(int, int)
+  1.85      0.53     0.01      500     0.02     0.02  checkPath(int, Road*, int, int*, int, Trip*, int)
+  1.85      0.54     0.01      500     0.02     0.02  Tripper::generatePath(int, int, int*, int*)
+  0.00      0.54     0.00  1355888     0.00     0.00  Vertex::Vertex(int, int)
+  0.00      0.54     0.00     1016     0.00     0.00  VBinaryHeap::~VBinaryHeap()
+  0.00      0.54     0.00      500     0.00     0.00  Tripper::setLandmarks(int, int)
+  0.00      0.54     0.00      500     0.00     0.92  Tripper::findPath(int, int, int*, int*)
+  0.00      0.54     0.00       16     0.00     0.00  Tripper::resetTempTable()
+  0.00      0.54     0.00        1     0.00     0.00  _GLOBAL__sub_I__ZN8CPUTimerC2Ev
+  0.00      0.54     0.00        1     0.00     0.00  _GLOBAL__sub_I_table
+  0.00      0.54     0.00        1     0.00     0.00  __static_initialization_and_destruction_0(int, int)
+  0.00      0.54     0.00        1     0.00     0.00  __static_initialization_and_destruction_0(int, int)
+  0.00      0.54     0.00        1     0.00     0.00  readFile(char const*, Trip**, int*, int*, int*, Road**, Road**)
+  0.00      0.54     0.00        1     0.00     0.00  Tripper::initializeList(int, Road*)
+  0.00      0.54     0.00        1     0.00    69.03  Tripper::preproc()
+  0.00      0.54     0.00        1     0.00    69.03  Tripper::Tripper(Road*, int, int)
+  0.00      0.54     0.00        1     0.00     0.00  Tripper::~Tripper()
+  0.00      0.54     0.00        1     0.00     0.00  CPUTimer::cur_CPUTime()
+  0.00      0.54     0.00        1     0.00     0.00  CPUTimer::reset()
+  0.00      0.54     0.00        1     0.00     0.00  CPUTimer::CPUTimer()
+
+ %         the percentage of the total running time of the
+time       program used by this function.
+
+cumulative a running sum of the number of seconds accounted
+ seconds   for by this function and those listed above it.
+
+ self      the number of seconds accounted for by this
+seconds    function alone.  This is the major sort for this
+           listing.
+
+calls      the number of times this function was invoked, if
+           this function is profiled, else blank.
+ 
+ self      the average number of milliseconds spent in this
+ms/call    function per call, if this function is profiled,
+	   else blank.
+
+ total     the average number of milliseconds spent in this
+ms/call    function and its descendents per call, if this 
+	   function is profiled, else blank.
+
+name       the name of the function.  This is the minor sort
+           for this listing. The index shows the location of
+	   the function in the gprof listing. If the index is
+	   in parenthesis it shows where it would appear in
+	   the gprof listing if it were to be printed.
+
+Copyright (C) 2012 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+		     Call graph (explanation follows)
+
+
+granularity: each sample hit covers 2 byte(s) for 1.85% of 0.54 seconds
+
+index % time    self  children    called     name
+                                                 <spontaneous>
+[1]    100.0    0.00    0.54                 main [1]
+                0.00    0.46     500/500         Tripper::findPath(int, int, int*, int*) [2]
+                0.00    0.07       1/1           Tripper::Tripper(Road*, int, int) [9]
+                0.01    0.00     500/500         checkPath(int, Road*, int, int*, int, Trip*, int) [13]
+                0.00    0.00       1/1           CPUTimer::CPUTimer() [35]
+                0.00    0.00       1/1           readFile(char const*, Trip**, int*, int*, int*, Road**, Road**) [30]
+                0.00    0.00       1/1           CPUTimer::reset() [34]
+                0.00    0.00       1/1           CPUTimer::cur_CPUTime() [33]
+                0.00    0.00       1/1           Tripper::~Tripper() [32]
+-----------------------------------------------
+                0.00    0.46     500/500         main [1]
+[2]     85.4    0.00    0.46     500         Tripper::findPath(int, int, int*, int*) [2]
+                0.07    0.30     500/500         Tripper::findCity(int, int, int&, int&) [3]
+                0.08    0.00     500/500         Tripper::setHeur(int, int) [5]
+                0.01    0.00     500/500         Tripper::generatePath(int, int, int*, int*) [14]
+                0.00    0.00     500/500         Tripper::setLandmarks(int, int) [24]
+-----------------------------------------------
+                0.07    0.30     500/500         Tripper::findPath(int, int, int*, int*) [2]
+[3]     68.7    0.07    0.30     500         Tripper::findCity(int, int, int&, int&) [3]
+                0.17    0.06  736714/736714      Tripper::dijkstraStep(VBinaryHeap&, int, int) [4]
+                0.04    0.00     500/500         Tripper::initializeTable() [10]
+                0.01    0.02    1000/1016        VBinaryHeap::VBinaryHeap(int, int) [11]
+                0.00    0.00    1000/1354872     VBinaryHeap::insert(Vertex const&) [15]
+                0.00    0.00    1000/1355888     Vertex::Vertex(int, int) [22]
+                0.00    0.00    1000/1016        VBinaryHeap::~VBinaryHeap() [23]
+-----------------------------------------------
+                0.17    0.06  736714/736714      Tripper::findCity(int, int, int&, int&) [3]
+[4]     43.0    0.17    0.06  736714         Tripper::dijkstraStep(VBinaryHeap&, int, int) [4]
+                0.05    0.00  736714/965871      VBinaryHeap::deleteMin(Vertex&) [6]
+                0.01    0.00 1123773/1354872     VBinaryHeap::insert(Vertex const&) [15]
+                0.00    0.00  736714/21285871     Vertex::Vertex() [12]
+                0.00    0.00 1123773/1355888     Vertex::Vertex(int, int) [22]
+-----------------------------------------------
+                0.08    0.00     500/500         Tripper::findPath(int, int, int*, int*) [2]
+[5]     14.8    0.08    0.00     500         Tripper::setHeur(int, int) [5]
+-----------------------------------------------
+                0.02    0.00  229157/965871      Tripper::fillLandmark(int, int) [7]
+                0.05    0.00  736714/965871      Tripper::dijkstraStep(VBinaryHeap&, int, int) [4]
+[6]     13.0    0.07    0.00  965871         VBinaryHeap::deleteMin(Vertex&) [6]
+-----------------------------------------------
+                0.05    0.02      16/16          Tripper::preproc() [8]
+[7]     12.8    0.05    0.02      16         Tripper::fillLandmark(int, int) [7]
+                0.02    0.00  229157/965871      VBinaryHeap::deleteMin(Vertex&) [6]
+                0.00    0.00  230099/1354872     VBinaryHeap::insert(Vertex const&) [15]
+                0.00    0.00      16/1016        VBinaryHeap::VBinaryHeap(int, int) [11]
+                0.00    0.00  229157/21285871     Vertex::Vertex() [12]
+                0.00    0.00  230099/1355888     Vertex::Vertex(int, int) [22]
+                0.00    0.00      16/16          Tripper::resetTempTable() [25]
+                0.00    0.00      16/1016        VBinaryHeap::~VBinaryHeap() [23]
+-----------------------------------------------
+                0.00    0.07       1/1           Tripper::Tripper(Road*, int, int) [9]
+[8]     12.8    0.00    0.07       1         Tripper::preproc() [8]
+                0.05    0.02      16/16          Tripper::fillLandmark(int, int) [7]
+-----------------------------------------------
+                0.00    0.07       1/1           main [1]
+[9]     12.8    0.00    0.07       1         Tripper::Tripper(Road*, int, int) [9]
+                0.00    0.07       1/1           Tripper::preproc() [8]
+                0.00    0.00       1/1           Tripper::initializeList(int, Road*) [31]
+-----------------------------------------------
+                0.04    0.00     500/500         Tripper::findCity(int, int, int&, int&) [3]
+[10]     7.4    0.04    0.00     500         Tripper::initializeTable() [10]
+-----------------------------------------------
+                0.00    0.00      16/1016        Tripper::fillLandmark(int, int) [7]
+                0.01    0.02    1000/1016        Tripper::findCity(int, int, int&, int&) [3]
+[11]     5.4    0.01    0.02    1016         VBinaryHeap::VBinaryHeap(int, int) [11]
+                0.02    0.00 20320000/21285871     Vertex::Vertex() [12]
+                0.00    0.00    1016/1355888     Vertex::Vertex(int, int) [22]
+-----------------------------------------------
+                0.00    0.00  229157/21285871     Tripper::fillLandmark(int, int) [7]
+                0.00    0.00  736714/21285871     Tripper::dijkstraStep(VBinaryHeap&, int, int) [4]
+                0.02    0.00 20320000/21285871     VBinaryHeap::VBinaryHeap(int, int) [11]
+[12]     3.7    0.02    0.00 21285871         Vertex::Vertex() [12]
+-----------------------------------------------
+                0.01    0.00     500/500         main [1]
+[13]     1.9    0.01    0.00     500         checkPath(int, Road*, int, int*, int, Trip*, int) [13]
+-----------------------------------------------
+                0.01    0.00     500/500         Tripper::findPath(int, int, int*, int*) [2]
+[14]     1.9    0.01    0.00     500         Tripper::generatePath(int, int, int*, int*) [14]
+-----------------------------------------------
+                0.00    0.00    1000/1354872     Tripper::findCity(int, int, int&, int&) [3]
+                0.00    0.00  230099/1354872     Tripper::fillLandmark(int, int) [7]
+                0.01    0.00 1123773/1354872     Tripper::dijkstraStep(VBinaryHeap&, int, int) [4]
+[15]     1.9    0.01    0.00 1354872         VBinaryHeap::insert(Vertex const&) [15]
+-----------------------------------------------
+                0.00    0.00    1000/1355888     Tripper::findCity(int, int, int&, int&) [3]
+                0.00    0.00    1016/1355888     VBinaryHeap::VBinaryHeap(int, int) [11]
+                0.00    0.00  230099/1355888     Tripper::fillLandmark(int, int) [7]
+                0.00    0.00 1123773/1355888     Tripper::dijkstraStep(VBinaryHeap&, int, int) [4]
+[22]     0.0    0.00    0.00 1355888         Vertex::Vertex(int, int) [22]
+-----------------------------------------------
+                0.00    0.00      16/1016        Tripper::fillLandmark(int, int) [7]
+                0.00    0.00    1000/1016        Tripper::findCity(int, int, int&, int&) [3]
+[23]     0.0    0.00    0.00    1016         VBinaryHeap::~VBinaryHeap() [23]
+-----------------------------------------------
+                0.00    0.00     500/500         Tripper::findPath(int, int, int*, int*) [2]
+[24]     0.0    0.00    0.00     500         Tripper::setLandmarks(int, int) [24]
+-----------------------------------------------
+                0.00    0.00      16/16          Tripper::fillLandmark(int, int) [7]
+[25]     0.0    0.00    0.00      16         Tripper::resetTempTable() [25]
+-----------------------------------------------
+                0.00    0.00       1/1           __libc_csu_init [44]
+[26]     0.0    0.00    0.00       1         _GLOBAL__sub_I__ZN8CPUTimerC2Ev [26]
+                0.00    0.00       1/1           __static_initialization_and_destruction_0(int, int) [28]
+-----------------------------------------------
+                0.00    0.00       1/1           __libc_csu_init [44]
+[27]     0.0    0.00    0.00       1         _GLOBAL__sub_I_table [27]
+                0.00    0.00       1/1           __static_initialization_and_destruction_0(int, int) [29]
+-----------------------------------------------
+                0.00    0.00       1/1           _GLOBAL__sub_I__ZN8CPUTimerC2Ev [26]
+[28]     0.0    0.00    0.00       1         __static_initialization_and_destruction_0(int, int) [28]
+-----------------------------------------------
+                0.00    0.00       1/1           _GLOBAL__sub_I_table [27]
+[29]     0.0    0.00    0.00       1         __static_initialization_and_destruction_0(int, int) [29]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[30]     0.0    0.00    0.00       1         readFile(char const*, Trip**, int*, int*, int*, Road**, Road**) [30]
+-----------------------------------------------
+                0.00    0.00       1/1           Tripper::Tripper(Road*, int, int) [9]
+[31]     0.0    0.00    0.00       1         Tripper::initializeList(int, Road*) [31]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[32]     0.0    0.00    0.00       1         Tripper::~Tripper() [32]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[33]     0.0    0.00    0.00       1         CPUTimer::cur_CPUTime() [33]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[34]     0.0    0.00    0.00       1         CPUTimer::reset() [34]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[35]     0.0    0.00    0.00       1         CPUTimer::CPUTimer() [35]
+-----------------------------------------------
+
+ This table describes the call tree of the program, and was sorted by
+ the total amount of time spent in each function and its children.
+
+ Each entry in this table consists of several lines.  The line with the
+ index number at the left hand margin lists the current function.
+ The lines above it list the functions that called this function,
+ and the lines below it list the functions this one called.
+ This line lists:
+     index	A unique number given to each element of the table.
+		Index numbers are sorted numerically.
+		The index number is printed next to every function name so
+		it is easier to look up where the function is in the table.
+
+     % time	This is the percentage of the `total' time that was spent
+		in this function and its children.  Note that due to
+		different viewpoints, functions excluded by options, etc,
+		these numbers will NOT add up to 100%.
+
+     self	This is the total amount of time spent in this function.
+
+     children	This is the total amount of time propagated into this
+		function by its children.
+
+     called	This is the number of times the function was called.
+		If the function called itself recursively, the number
+		only includes non-recursive calls, and is followed by
+		a `+' and the number of recursive calls.
+
+     name	The name of the current function.  The index number is
+		printed after it.  If the function is a member of a
+		cycle, the cycle number is printed between the
+		function's name and the index number.
+
+
+ For the function's parents, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the function into this parent.
+
+     children	This is the amount of time that was propagated from
+		the function's children into this parent.
+
+     called	This is the number of times this parent called the
+		function `/' the total number of times the function
+		was called.  Recursive calls to the function are not
+		included in the number after the `/'.
+
+     name	This is the name of the parent.  The parent's index
+		number is printed after it.  If the parent is a
+		member of a cycle, the cycle number is printed between
+		the name and the index number.
+
+ If the parents of the function cannot be determined, the word
+ `<spontaneous>' is printed in the `name' field, and all the other
+ fields are blank.
+
+ For the function's children, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the child into the function.
+
+     children	This is the amount of time that was propagated from the
+		child's children to the function.
+
+     called	This is the number of times the function called
+		this child `/' the total number of times the child
+		was called.  Recursive calls by the child are not
+		listed in the number after the `/'.
+
+     name	This is the name of the child.  The child's index
+		number is printed after it.  If the child is a
+		member of a cycle, the cycle number is printed
+		between the name and the index number.
+
+ If there are any cycles (circles) in the call graph, there is an
+ entry for the cycle-as-a-whole.  This entry shows who called the
+ cycle (as parents) and the members of the cycle (as children.)
+ The `+' recursive calls entry shows the number of function calls that
+ were internal to the cycle, and the calls entry for each member shows,
+ for that member, how many times it was called from other members of
+ the cycle.
+
+Copyright (C) 2012 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+Index by function name
+
+  [26] _GLOBAL__sub_I__ZN8CPUTimerC2Ev [22] Vertex::Vertex(int, int) [5] Tripper::setHeur(int, int)
+  [27] _GLOBAL__sub_I_table   [12] Vertex::Vertex()        [3] Tripper::findCity(int, int, int&, int&)
+  [28] __static_initialization_and_destruction_0(int, int) [4] Tripper::dijkstraStep(VBinaryHeap&, int, int) [2] Tripper::findPath(int, int, int*, int*)
+  [29] __static_initialization_and_destruction_0(int, int) [7] Tripper::fillLandmark(int, int) [9] Tripper::Tripper(Road*, int, int)
+  [30] readFile(char const*, Trip**, int*, int*, int*, Road**, Road**) [14] Tripper::generatePath(int, int, int*, int*) [32] Tripper::~Tripper()
+  [13] checkPath(int, Road*, int, int*, int, Trip*, int) [24] Tripper::setLandmarks(int, int) [33] CPUTimer::cur_CPUTime()
+  [15] VBinaryHeap::insert(Vertex const&) [31] Tripper::initializeList(int, Road*) [34] CPUTimer::reset()
+   [6] VBinaryHeap::deleteMin(Vertex&) [25] Tripper::resetTempTable() [35] CPUTimer::CPUTimer()
+  [11] VBinaryHeap::VBinaryHeap(int, int) [10] Tripper::initializeTable()
+  [23] VBinaryHeap::~VBinaryHeap() [8] Tripper::preproc()
